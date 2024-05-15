@@ -1,0 +1,148 @@
+*,::after,::before{
+    margin: 0; padding: 0; border: 0; outline: 0; box-sizing: border-box;
+}
+
+:root{
+    --mt-1: 10px;
+    --res: calc(0.01 * 10vmin);
+}
+
+html{
+    background: #F6ECEE;
+    color: #010101;
+}
+
+body{
+    margin: 15px 15%;
+}
+
+header{
+    height: 85px;
+}
+
+header nav{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.logo{
+    width: 70px; height: auto;
+}
+
+header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header li.one{
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+header a{
+    position: relative;
+    text-decoration: none;
+    color: #010101;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 110%; left: 0;
+    width: 100%;
+    border-top: 2px solid #010101;
+    transform-origin: right;
+    transform:scale(0);
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+li:hover a::after{
+    transform: scale(1);
+    transform-origin: left;
+    transition: transform .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+section.hero{
+    width: auto;
+    /* height: calc(100vh - 90px); */
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 2% 0;
+}
+
+.hero-item-one img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+.hero-item-two{
+    margin-top: 8%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+}
+.hero-item-two-text.three{
+    margin-top: 20px;
+}
+.hero-item-two-text{
+    width: 100%;
+}
+.hero-item-two-text.one, .hero-item-two-text.two{
+    height: auto;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+.hero-item-two-text.one span{
+    background-image: linear-gradient(45deg,#FF1542, #FFD215);
+    background-clip: text;
+    color: transparent;
+}
+.hero-item-two-text.two span{
+    background-image: linear-gradient(45deg,#FFD215, #FF1542);
+    background-clip: text;
+    color: transparent;
+}
+.hero-item-two-text.three{
+    height: calc(100% - 260px);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+.hero-item-two-text.four{
+    margin-top: 15px;
+    position: relative;
+}
+.hero-item-two-text.four button{
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #FF1542, #FFD215);
+}
+.hero-item-two-text.four button a{
+    text-decoration: none;
+    padding: 15px;
+    color: #010101;
+}
+
+
+
+
+
